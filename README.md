@@ -11,7 +11,7 @@ Plataforma para jogadores organizarem seus jogos, descobrirem novos títulos e i
 
 ###  Biblioteca de jogos
 - Adicionar jogos à biblioteca
-- Organizar jogos por status
+- Organizar jogos por status:
   - Quero jogar
   - Jogando
   - Zerado
