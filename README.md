@@ -4,7 +4,7 @@
 Plataforma para jogadores organizarem seus jogos, descobrirem novos títulos e interagirem com outros jogadores por meio de avaliações, comentários e discussoes sobre jogos.
 ## Funcionalidades
 
-##  Usuários
+### Usuários
 - Cadastro e login de usuarios
 - Criação e edição de perfilç
 - Visualização da biblioteca pessoal
