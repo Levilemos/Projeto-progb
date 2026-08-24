@@ -1,6 +1,6 @@
 # PlayLog
 
-##resumo##
+##resumo
 Plataforma para jogadores organizarem seus jogos, descobrirem novos títulos e interagirem com outros jogadores por meio de avaliações, comentários e discussões sobre jogos.
 ###  Usuários
 - Cadastro e login de usuários;
