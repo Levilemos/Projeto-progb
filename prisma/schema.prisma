@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  email     String   @unique
+  password  String
+  bio       String?
+  createdAt DateTime @default(now())
+
+  library  Library[]
+  reviews  Review[]
+  comments Comment[]
+}
+
+model Game {
+  id          Int      @id @default(autoincrement())
+  title       String
+  genre       String
+  category    String
+  description String?
+  createdAt   DateTime @default(now())
+
+  library  Library[]
+  reviews  Review[]
+  comments Comment[]
+}
+
+model Library {
+  id       Int     @id @default(autoincrement())
+  status   String
+  favorite Boolean @default(false)
+
+  userId Int
+  gameId Int
+
+  user User @relation(fields: [userId], references: [id])
+  game Game @relation(fields: [gameId], references: [id])
+
+  @@unique([userId, gameId])
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  rating    Int
+  createdAt DateTime @default(now())
+
+  userId Int
+  gameId Int
+
+  user User @relation(fields: [userId], references: [id])
+  game Game @relation(fields: [gameId], references: [id])
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  content   String
+  createdAt DateTime @default(now())
+
+  userId Int
+  gameId Int
+
+  user User @relation(fields: [userId], references: [id])
+  game Game @relation(fields: [gameId], references: [id])
+}
