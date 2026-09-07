@@ -14,7 +14,7 @@ A migration `initial` é responsável por criar a estrutura inicial do banco de 
 
 ## 3. Qual é o caminho do arquivo que gera a seed do banco?
 
-`/workspaces/nome-do-projeto/prisma/seed.ts`
+`prisma/seed.ts`
 
 ## 4. Quais endpoints serão implementados inicialmente? Justifique.
 
